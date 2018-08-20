@@ -31,6 +31,7 @@ namespace TelloLib
         {
             TelloClient = new UdpClient();
             TelloClient.Client.Connect(IPAddress.Parse(_ipString), _port);
+            // TODO Make the app work again after reconnecting
 
             StreamClient = new UdpClient(new IPEndPoint(IPAddress.Parse(_videoStreamIp), _videoStreamPort));
         }
